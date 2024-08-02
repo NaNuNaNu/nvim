@@ -1,14 +1,8 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre' -- uncomment for format on save
-    config = function()
-      require "configs.conform"
-    end,
-  },
-
    {
      "neovim/nvim-lspconfig",
+     event = "BufReadPre",
+     dependencies = { "hrsh7th/cmp-nvim-lsp" },
      config = function()
        require("nvchad.configs.lspconfig").defaults()
        require "configs.lspconfig"
@@ -19,7 +13,7 @@ return {
    	opts = {
    		ensure_installed = {
    			"lua-language-server", "stylua",
-   			"gopls", "clangd" ,
+   			"gopls", "clangd" , "zls", "pyright"
    		},
    	},
    },
@@ -27,7 +21,7 @@ return {
    	"nvim-treesitter/nvim-treesitter",
    	opts = {
    		ensure_installed = {
-   			"vim", "lua", "go", "cpp"
+   			"vim", "lua", "go", "cpp", "c", "cmake", "python", "zig", "rust"
    		},
    	},
    },
