@@ -8,6 +8,7 @@ M.ui = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
+  --
 }
 
 return M
