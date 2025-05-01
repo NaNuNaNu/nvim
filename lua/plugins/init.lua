@@ -14,7 +14,7 @@ return {
       ensure_installed = {
         "lua-language-server", "stylua",
         "gopls", "clangd", "zls", "pyright",
-        "rust-analyzer"
+        "rust-analyzer", "codelldb"
       },
     },
   },
@@ -22,7 +22,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "vim", "lua", "go", "cpp", "c", "cmake", "python", "zig", "rust", "sql", "make"
+        "vim", "lua", "go", "cpp", "c", "cmake", "python", "zig", "rust", "ron", "sql", "make"
       },
     },
   },

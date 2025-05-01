@@ -3,7 +3,7 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "clangd", "gopls", "pyright", "sqls" }
+local servers = { "clangd", "gopls", "pyright", "sqls", "zls" }
 
 for _, lsp in ipairs(servers) do
   if lsp == "clangd" then

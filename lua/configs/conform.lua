@@ -8,6 +8,7 @@ local options = {
     objcpp = { "clang_format" },
     cuda = { "clang_format" },
     proto = { "clang_format" },
+    rust = { "rustfmt" },
     ["*"] = { "codespell" },
     ["_"] = { "trim_whitespace"},
   },
