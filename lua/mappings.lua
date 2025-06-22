@@ -7,8 +7,23 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
---
+-- File explorer toggle with Ctrl-n
+map("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle nvimtree" })
+
+-- Large floating terminal with Alt+i
+map({ "n", "t" }, "<M-i>", function()
+  require("nvchad.term").toggle {
+    pos = "float",
+    id = "floatTerm",
+    float_opts = {
+      row = 0.05,    -- 5% from top
+      col = 0.05,    -- 5% from left
+      width = 0.9,   -- 90% of screen width
+      height = 0.9,  -- 90% of screen height
+    }
+  }
+end, { desc = "Toggle large floating terminal" })
+
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
